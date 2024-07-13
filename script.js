@@ -5,7 +5,7 @@ function checkPassword(event) {
     const passwordError = document.getElementById('password-error');
     const music = document.getElementById('background-music');
 
-    if (password === '1807') {
+    if (password === '900segundos') {
         document.body.classList.add('body-logged-in');
         document.getElementById('container').classList.add('hidden');
         document.getElementById('dinosaur').classList.add('hidden');
