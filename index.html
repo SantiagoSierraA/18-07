@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="https://fbi.cults3d.com/uploaders/24106021/illustration-file/ae493516-b026-4b02-820b-db553dada889/mc-heart-transparent-big.png">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="preload" href="Foto1.jpeg" as="image">
+    <link rel="preload" href="Foto2.jpeg" as="image">
+    <link rel="preload" href="Foto3.jpeg" as="image">
+    <link rel="preload" href="Foto4.jpeg" as="image">
+    <link rel="preload" href="Foto5.jpeg" as="image">
+    <link rel="preload" href="Foto6.jpeg" as="image">
+    <link rel="preload" href="Cita.jpeg" as="image">
+    <link rel="preload" href="Dinosaurio.png" as="image">
+    <link rel="preload" href="background-hearts.jpg" as="image">
+    <link rel="preload" href="La danza de las libelulas.mp3" as="audio">
+    <link rel="preload" href="Video1.mp4" as="video">
+    <link rel="preload" href="Video2.mp4" as="video">
+    <link rel="preload" href="Video3.mp4" as="video">
+    <link rel="preload" href="Video4.mp4" as="video">
+    <link rel="preload" href="Video5.mp4" as="video">
+    <link rel="preload" href="Video6.mp4" as="video">
+
+    <title>18-07 <3</title>
+</head>
+<body>
+    <main>
+        <div class="container" id="container">
+            <div class="container_form login">
+                <form onsubmit="return checkPassword(event)">
+                    <h1 class="text">Contraseña:</h1>
+                    <input type="password" id="password" placeholder="Adivina la contraseña" onfocus="clearErrorMessage()">
+                    <button class="button" type="submit">Entrar</button>
+                    <div id="password-error" class="error-message hidden">Contraseña incorrecta. Inténtalo de nuevo.</div>
+                </form>
+            </div>
+        </div>
+        <div class="dino" id="dinosaur">
+            <img src="Dinosaurio.png" id="dino">
+        </div>
+
+        <div class="main-content hidden" id="main-content">
+            <div id="grid-container">
+                <div class="grid-item" id="collage">
+                    <img src="Foto1.jpeg" data-message="9 de noviembre de 2023, luego de comer un tequilita por tu cum <3">
+                    <img src="Foto2.jpeg" data-message="23 de julio de 2023, luego de la fiesta sorpresa <3">
+                    <img src="Foto3.jpeg" data-message="7 de septiembre de 2022, cuando nos disfrazamos en el liceo ksdkjnd">
+                    <img src="Foto4.jpeg" data-message="9 de noviembre de 2022 en el gym el día de tu cum ñiajaja">
+                    <img src="Foto5.jpeg" data-message="31 de octubre de 2023 en jawilin disfrazados de padrinos mágicos">
+                     <img src="Foto6.jpeg" data-message="22 de junio de 2022, cuando empezó todo ❤️">
+                    <img src="Cita.jpeg" data-message="14 de julio de 2022, nuestra primera cita <3">
+                    <div id="message-container" class="hidden">
+                      <p id="image-message"></p>
+                    </div>
+                </div>
+                <div class="grid-item" id="feliz-aniversario">
+                    <h1 id="message-aniversary">🥰 Feliz Aniversario 🎉</h1>
+                    <h2 id="message-aniversary-2">18♡07♡2022</h2>
+                    <h2 id="message-aniversary-3">Llevamos juntitos :</h2>
+                    <div id="counter"></div>
+                </div>
+                <div class="grid-item" id="letter">
+                    <div id="letter-container">
+                      <p id="letter-message">Lorem</p>
+                    </div>
+                </div>
+                <div class="grid-item" id="sunflowers">
+                    <h1 id="message-sunflowers">Para ti <3</h1>
+                    <img src="https://kayletter.devaydren.com/flowers/sunflower.gif" alt="Girasoles">
+                </div>
+            </div>
+            <div class="final-content hidden" id="final-content">
+                <div class="final-item">
+                    <h1 id="message-carrousel">✨ Mejores momentos ✨</h1>
+                    <div class="slider" id="slider-container">
+                        <div class="slides">
+                            <video class="slide" controls src="Video3.mp4"></video>
+                            <video class="slide" controls src="Video4.mp4"></video>
+                            <video class="slide" controls src="Video1.mp4"></video>
+                            <video class="slide" controls src="Video2.mp4"></video>
+                            <video class="slide" controls src="Video5.mp4"></video>
+                            <video class="slide" controls src="Video6.mp4"></video>
+                        </div>
+                        <button class="prev" onclick="prevSlide()">&#10094</button>
+                        <button class="next" onclick="nextSlide()">&#10095</button>
+                    </div>
+                </div>
+                <div class="final-item hearts-animations" id="hearts-container">
+                    <div class="message-hearts">
+                        <p>Te amo corazón, nunca lo dudes ni lo olvides ❤.</p>
+                    </div>
+                    <div class="heart">
+                    <img src="https://fbi.cults3d.com/uploaders/24106021/illustration-file/ae493516-b026-4b02-820b-db553dada889/mc-heart-transparent-big.png" height="35px" width="36px"></div>
+                    <div class="heart">
+                        <img src="https://fbi.cults3d.com/uploaders/24106021/illustration-file/ae493516-b026-4b02-820b-db553dada889/mc-heart-transparent-big.png" height="35px" width="36px"></div>
+                    <div class="heart">
+                        <img src="https://fbi.cults3d.com/uploaders/24106021/illustration-file/ae493516-b026-4b02-820b-db553dada889/mc-heart-transparent-big.png" height="35px" width="36px"></div>
+                    <div class="heart">
+                        <img src="https://fbi.cults3d.com/uploaders/24106021/illustration-file/ae493516-b026-4b02-820b-db553dada889/mc-heart-transparent-big.png" height="35px" width="36px"></div>
+                    <div class="heart">
+                        <img src="https://fbi.cults3d.com/uploaders/24106021/illustration-file/ae493516-b026-4b02-820b-db553dada889/mc-heart-transparent-big.png" height="35px" width="36px"></div>
+                    <div class="heart">
+                        <img src="https://fbi.cults3d.com/uploaders/24106021/illustration-file/ae493516-b026-4b02-820b-db553dada889/mc-heart-transparent-big.png" height="35px" width="36px"></div>
+                    <div class="heart">
+                        <img src="https://fbi.cults3d.com/uploaders/24106021/illustration-file/ae493516-b026-4b02-820b-db553dada889/mc-heart-transparent-big.png" height="35px" width="36px"></div>
+                    <div class="heart">
+                        <img src="https://fbi.cults3d.com/uploaders/24106021/illustration-file/ae493516-b026-4b02-820b-db553dada889/mc-heart-transparent-big.png" height="35px" width="36px"></div>
+                    <div class="heart">
+                        <img src="https://fbi.cults3d.com/uploaders/24106021/illustration-file/ae493516-b026-4b02-820b-db553dada889/mc-heart-transparent-big.png" height="35px" width="36px"></div>
+                    <div class="heart">
+                        <img src="https://fbi.cults3d.com/uploaders/24106021/illustration-file/ae493516-b026-4b02-820b-db553dada889/mc-heart-transparent-big.png" height="35px" width="36px"></div>
+                    <div class="heart">
+                        <img src="https://fbi.cults3d.com/uploaders/24106021/illustration-file/ae493516-b026-4b02-820b-db553dada889/mc-heart-transparent-big.png" height="35px" width="36px"></div>
+                    <div class="heart">
+                        <img src="https://fbi.cults3d.com/uploaders/24106021/illustration-file/ae493516-b026-4b02-820b-db553dada889/mc-heart-transparent-big.png" height="35px" width="36px"></div>
+                    <div class="heart">
+                        <img src="https://fbi.cults3d.com/uploaders/24106021/illustration-file/ae493516-b026-4b02-820b-db553dada889/mc-heart-transparent-big.png" height="35px" width="36px"></div>
+                    <div class="heart">
+                        <img src="https://fbi.cults3d.com/uploaders/24106021/illustration-file/ae493516-b026-4b02-820b-db553dada889/mc-heart-transparent-big.png" height="35px" width="36px"></div>
+                    <div class="heart">
+                        <img src="https://fbi.cults3d.com/uploaders/24106021/illustration-file/ae493516-b026-4b02-820b-db553dada889/mc-heart-transparent-big.png" height="35px" width="36px"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <audio id="background-music" src="La danza de las libelulas.mp3"></audio>
+    <audio id="chillido" src="Sonido-chillon.mp3"></audio>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
